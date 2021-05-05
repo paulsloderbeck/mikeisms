@@ -1,0 +1,35 @@
+<h1>mikeisms</h1>
+<h2>Dedicated to the Finest Web Developer I know: Mike Sloderbeck, my Dad</h2>
+
+<img src="/assets/mike.JPG" alt="mike" width="200" height="200">
+
+<h2>Your Mikeisms to Understand</h2>
+
+<ul>
+    {{#each mikeism}}
+    {{#unless understood}}
+    {{> mikeisms/mikeism-block}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Understood Mikeisms!</h2>
+<ul>
+    {{#each mikeism}}
+    {{#if understood}}
+    {{> mikeisms/understood-block}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Mikeism</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="mikeism">Mikeism:</label>
+        <input type="text" id="mikeism" name="name">
+    </div>
+
+
+    <button type="submit">Add Mikeism</button>
+</form>
